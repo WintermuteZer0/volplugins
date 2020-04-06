@@ -1,9 +1,14 @@
 import volatility.plugins.common as common
-import volatility.utils as utils 
+import volatility.utils as utils
 import volatility.win32 as win32
 import volatility.plugins.filescan as filescan
 import volatility.plugins.dumpfiles as filedump
 from volatility.renderers.basic import Address
+
+# Quick Scheduled Task extraction volatility plugin for use in analysis of Windows images
+# Check the following locations and dumps tasks:
+# C:\Windows\System32\tasks (schedtask task v2.0)
+# C:\Windows\Tasks (At tasks v1.0)
 
 TASK_LOCATIONS = ['system32\\tasks']
 
